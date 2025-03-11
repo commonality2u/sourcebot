@@ -29,11 +29,11 @@ export default async function Home({ params: { domain } }: { params: { domain: s
                         className="h-32 w-auto mb-2"
                     />
                     <div className="flex items-center mt-2">
-                        <h1 className="text-white text-3xl font-bold">Code Search</h1>
+                        <h1 className="text-foreground text-3xl font-bold">Code Search</h1>
                         <span className="text-[#999999] text-sm ml-3 mt-1 flex items-center">
                             powered by{" "}
                             <Link href="https://sourcebot.dev" className="ml-1">
-                                <SourcebotLogo size="large" className="h-8 w-auto inline-block" />
+                                <SourcebotLogo size="large" className="h-8 w-auto" />
                             </Link>
                         </span>
                     </div>
