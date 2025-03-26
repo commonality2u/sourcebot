@@ -24,6 +24,14 @@ export default function RootLayout({
             // @see : https://github.com/pacocoursey/next-themes?tab=readme-ov-file#with-app
             suppressHydrationWarning
         >
+            <head>
+                <title>GitLab Code Search - Sourcebot</title>
+                <meta name="og:title" content="GitLab Code Search - Sourcebot" />
+                <meta name="og:description" content="Search 1000+ GitLab projects" />
+                <meta name="og:image" content="https://gitlab.sourcebot.dev/gitlab_og_image.png" />
+                <meta name="og:url" content="https://gitlab.sourcebot.dev" />
+                <meta name="og:type" content="website" />
+            </head>
             <body>
                 <Toaster />
                 <SessionProvider>
