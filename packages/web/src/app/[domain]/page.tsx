@@ -9,6 +9,7 @@ import { Footer } from "@/app/components/footer";
 import { SourcebotLogo } from "../components/sourcebotLogo";
 import { RepositorySnapshot } from "./components/repositorySnapshot";
 import { SyntaxReferenceGuideHint } from "./components/syntaxReferenceGuideHint";
+import { GitlabLogo } from "./components/gitlabLogo";
 
 export default async function Home({ params: { domain } }: { params: { domain: string } }) {
     const org = await getOrgFromDomain(domain);
@@ -23,10 +24,19 @@ export default async function Home({ params: { domain } }: { params: { domain: s
             />
             <UpgradeToast />
             <div className="flex flex-col justify-center items-center mt-8 mb-8 md:mt-18 w-full px-5">
-                <div className="max-h-44 w-auto">
-                    <SourcebotLogo
-                        className="h-18 md:h-40 w-auto"
+            <div className="mb-10 flex flex-col items-center">
+                    <GitlabLogo
+                        className="h-42 w-auto mb-2"
                     />
+                    <div className="flex items-center mt-2">
+                        <h1 className="text-foreground text-3xl font-bold">Code Search</h1>
+                        <span className="text-[#999999] text-sm ml-3 mt-1 flex items-center">
+                            powered by{" "}
+                            <Link href="https://sourcebot.dev" className="ml-1">
+                                <SourcebotLogo size="large" className="h-8 w-auto" />
+                            </Link>
+                        </span>
+                    </div>
                 </div>
                 <SearchBar
                     autoFocus={true}
